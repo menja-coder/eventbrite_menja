@@ -19,10 +19,7 @@ require 'faker'
 
         email:"#{Faker::Name.first_name}@yopmail.com", encrypted_password: Faker::Internet.password)
 
-    user.save
-
 end
-
 puts "User ok"
 
 20.times do
@@ -48,8 +45,6 @@ puts "Event added"
 10.times do
 
     attendance = Attendance.create(stripe_customer_id: Faker::Lorem.characters, event: Event.all.sample, participant: User.all.sample)
-
-    attendance.save
 
 end
 
