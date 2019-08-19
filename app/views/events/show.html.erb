@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div style = "margin-left: 33%">
+    
+         		<strong>Titre:</strong>  <%=@events.title %> </br>
+            	<strong>Date de debut: </strong> <%=@events.start_date %> </br>
+				<strong> Durée: </strong> <%= @events.duration %> </br>
+				<strong> Lieu: </strong> <%= @events.location %> </br>
+				<strong> Description: </strong> <%= @events.description %> </br>
+				<strong> Admin: </strong> <%= @events.admin.first_name %> </br>
+			
+ 				<%=link_to "Revenir en arrière", root_path %>
+    </div>
+
+</body>
+</html>

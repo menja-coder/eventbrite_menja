@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event</title>
+</head>
+
+<body>
+	 <h1 style= "color: MediumBlue; margin-left: 33%; margin-top: 50px">Prochains évènements</h1>
+<div class="#" style="display: flex; flex-wrap: wrap; padding-top: 50px">
+	<% @events.each do |event| %>
+
+	
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <p class="card-title"><strong>Titre:</strong>  <%=event.title %> </br>
+            	<strong>Date de debut: </strong> <%=event.start_date %> </br>
+				<strong> Durée: </strong> <%= event.duration %> </br>
+			</p>
+ <%=link_to "Plus de détails", event_path(event.id) %>
+          </div>
+        </div>
+      </div>
+    </div>
+	<%end%>
+</div>
+
+</body>
+</html>
+

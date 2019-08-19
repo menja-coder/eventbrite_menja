@@ -1,0 +1,44 @@
+
+
+<%= form_tag url_for(action: 'create'), method: "post" do %>
+
+    <%= label_tag 'start_date: (day-month-year)' %></br>
+
+    <%= text_field_tag 'start_date', @event.start_date %>
+
+    <br /> <br />
+
+  <%= label_tag 'duration: (day)' %></br>
+
+  <%= text_field_tag 'duration', @event.duration %>
+
+  <br /> <br />
+
+  <%= label_tag 'title:' %></br>
+
+  <%= text_field_tag 'title', @event.title %>
+
+  <br /> <br />
+
+  <%= label_tag 'description:' %></br>
+
+  <%= text_area_tag 'description', @event.description %>
+
+  <br /> <br />
+
+  <%= label_tag 'price:' %></br>
+
+  <%= text_field_tag 'price', @event.price %>
+
+  <br /> <br />
+
+  <%= label_tag 'location:' %></br>
+
+  <%= text_field_tag 'location', @event.location %>
+
+  <br /> <br />
+
+  <%= submit_tag "Create Event" %>
+
+<%end%>
+
